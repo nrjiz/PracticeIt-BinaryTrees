@@ -1,0 +1,13 @@
+public void printLevel(int k){
+    
+    printLevel(overallRoot,k);
+}
+public void printLevel(IntTreeNode root, int k ){
+    if(k<=0)throw new IllegalArgumentException();
+    if(root==null) return;
+    else if(k==1) System.out.println(root.data);
+    else {
+        printLevel(root.left,k-1) ;
+        printLevel(root.right,k-1);
+         }
+}
