@@ -1,0 +1,7 @@
+public int depthSum(){
+    return depthSum(overallRoot,1);
+}
+public int depthSum(IntTreeNode root, int value){
+    if (root==null) return 0;
+    else return value*root.data + depthSum(root.left,value+1)+depthSum(root.right,value+1);
+}
