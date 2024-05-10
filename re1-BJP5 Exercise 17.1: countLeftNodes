@@ -1,0 +1,10 @@
+public int countLeftNodes(){
+    return countLeftNodes(overallRoot);
+}
+public int countLeftNodes(IntTreeNode root){
+    if(root==null)return 0;
+    //if root.left exit add one
+    if(root.left!=null)return 1+ countLeftNodes(root.left)+countLeftNodes(root.right);
+    //root.left ==null then check root.right
+    else return countLeftNodes(root.right);
+}
